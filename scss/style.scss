@@ -1,0 +1,476 @@
+@use "variables";
+@use "mixins";
+
+* {
+    font-family: "Josefin Sans";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+
+    a {
+        color: variables.$text-color;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 3rem 9% 2rem;
+
+    .section-title {
+        @include mixins.title;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    @include mixins.container;
+
+    @include mixins.mobile {
+        padding: 1.1rem;
+    }
+
+    &-brand {
+        //vai ser traduzido para header-brand
+        color: variables.$primary-color;
+        font-size: 3rem;
+        @include mixins.mobile {
+            font-size: 1rem;
+        }
+    }
+
+    &-navbar {
+        //vai ser traduzido para header-navbar
+        ul {
+            height: 100%;
+            @include mixins.flex-center;
+            @include mixins.mobile {
+                display: none;
+            }
+
+            li {
+                margin: 0 1rem;
+                text-transform: 0.8rem;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                .active {
+                    color: variables.$primary-color;
+                }
+                a {
+                    &:hover {
+                        color: variables.$primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &-social-media {
+        ul {
+            @include mixins.flex-center;
+
+            height: 100%;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    &:hover {
+                        color: variables.$primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section-about {
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(80%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/fotografo2.jpg");
+    background-size: 100%;
+    @include mixins.flex-center;
+    justify-content: start;
+
+    @include mixins.mobile {
+        background-size: 280%;
+    }
+}
+
+.about {
+    font-size: 1.5rem;
+
+    @include mixins.mobile {
+        flex-direction: column;
+        font-size: 0.8rem;
+    }
+
+    &-name {
+        font-size: 3rem;
+        color: variables.$primary-color;
+    }
+
+    &-img {
+        @include mixins.flex-center;
+
+        img {
+            height: 85vh;
+            filter: grayscale(100%);
+            @include mixins.mobile {
+                height: 55vh;
+            }
+        }
+    }
+
+    .btn-contact {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        background-color: black;
+        font-weight: bold;
+        font-size: 1rem;
+        height: 40px;
+        width: 60%;
+        border-radius: 18px;
+        border: 1px solid variables.$primary-color;
+        color: variables.$primary-color;
+        text-decoration: none;
+        transition: 0.4s;
+        -webkit-box-shadow: 0px 0px 32px -14px variables.$text-color;
+        -moz-box-shadow: 0px 0px 32px -14px variables.$text-color;
+        box-shadow: 0px 0px 32px -12px variables.$text-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: variables.$text-color;
+            color: black;
+            border: 1px solid black;
+            -webkit-box-shadow: 0px 0px 32px -14px black;
+            -moz-box-shadow: 0px 0px 32px -14px black;
+            box-shadow: 0px 0px 32px -12px black;
+        }
+    }
+}
+
+#section-services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(41, 42, 43);
+}
+
+.services {
+    @include mixins.flex-center;
+    @include mixins.container;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+
+    @include mixins.mobile {
+        flex-direction: column;
+    }
+
+    &-card {
+        width: 31%;
+        height: 400px;
+        margin-bottom: 4%;
+        @include mixins.flex-center;
+        flex-direction: column;
+        color: variables.$primary-color;
+
+        @include mixins.mobile {
+            width: 85%;
+            height: 350px;
+            margin-bottom: 6%;
+        }
+
+        &-title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        &-btn {
+            padding: 0.6rem 2rem; //vertical horizotal
+            border: 2px solid variables.$primary-color;
+            color: variables.$primary-color;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &:hover {
+                background-color: variables.$primary-color;
+                color: variables.$bg-color;
+            }
+        }
+    }
+    #card-1 {
+        @include mixins.bg-img("corporate.jpg");
+    }
+    #card-2 {
+        @include mixins.bg-img("studio.jpg");
+    }
+    #card-3 {
+        @include mixins.bg-img("fashion.png");
+        @include mixins.mobile {
+            background-size: 105%;
+        }
+    }
+}
+
+#section-desc {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/city.jpg");
+    color: variables.$primary-color;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+
+    @include mixins.mobile {
+        flex-direction: column;
+        background-size: 400%;
+    }
+
+    .desc {
+        width: 60%;
+        display: flex;
+        align-items: center;
+
+        @include mixins.mobile {
+            width: 100%;
+            padding: 1rem 5% 2rem;
+        }
+
+        img {
+            @include mixins.mobile {
+                width: 80%;
+            }
+        }
+
+        &-img {
+            width: 50%;
+        }
+
+        &-text {
+            width: 50%;
+            text-align: justify;
+            @include mixins.mobile {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    #box-gallery {
+        @include mixins.flex-center;
+        width: 100%;
+        min-height: 30vh;
+
+        @include mixins.mobile {
+            flex-wrap: wrap;
+        }
+
+        .gallery-card {
+            width: 33%;
+            height: 30vh;
+            filter: grayscale(70%);
+            @include mixins.mobile {
+                height: 20vh;
+                border: 1px solid black;
+            }
+        }
+
+        #card-8 {
+            @include mixins.gallery-img("pessoas.jpg");
+        }
+        #card-9 {
+            @include mixins.gallery-img("refeicoes.jpg");
+            background-size: 120%;
+        }
+
+        #card-10 {
+            @include mixins.gallery-img("estudio.jpg");
+        }
+
+        #card-4 {
+            @include mixins.gallery-img("decoracao.jpg");
+        }
+        #card-5 {
+            @include mixins.gallery-img("esportes.jpg");
+        }
+        #card-6 {
+            @include mixins.gallery-img("cidade.jpg");
+        }
+        #card-7 {
+            @include mixins.gallery-img("paisagem.jpg");
+        }
+
+        #card-11 {
+            @include mixins.gallery-img("moda.png");
+            @include mixins.mobile {
+                display: none;
+            }
+        }
+    }
+
+    #box-location {
+        @include mixins.flex-center;
+        flex-direction: column;
+        width: 100%;
+        height: 20vh;
+        background-color: rgba(0, 0, 0, 0.658);
+
+        p {
+            margin: 5px;
+        }
+    }
+}
+
+#section-contact {
+    @include mixins.flex-center;
+    justify-content: space-around;
+    background-color: #0e1010;
+    min-height: 40vh;
+    @include mixins.mobile {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    div > img {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+        max-width: 30em;
+        background-color: #0e1010;
+        padding: 1em;
+        height: 400px;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        @include mixins.flex-center;
+        flex-direction: column;
+    }
+
+    label,
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea {
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 2px solid transparent;
+        border-bottom-color: #bbb;
+        padding: 0.75em;
+        margin: 0.1em 0 2em;
+        color: white;
+        outline: 0;
+    }
+
+    input:invalid:focus,
+    textarea:invalid:focus {
+        border-bottom: 2px solid #6e2528;
+    }
+
+    input:valid:focus,
+    textarea:valid:focus {
+        border-bottom: 2px solid #156121;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-bottom: 2px solid #8e999a;
+        background-color: #2a2727;
+    }
+
+    legend {
+        padding: 0.5em;
+        text-align: center;
+        font-weight: bold;
+        color: #8e999a;
+        font-size: 1.3em;
+    }
+
+    .btn {
+        background-color: #2a2727;
+        color: white;
+        cursor: pointer;
+        padding: 0.7em;
+        font-size: 1.2em;
+        border: none;
+    }
+}
+
+.btn-back-top {
+    @include mixins.flex-center;
+    position: fixed;
+    background-color: #000;
+    text-decoration: none;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    @include mixins.mobile {
+        bottom: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &::after {
+        content: "↑";
+        font-size: 32px;
+        font-weight: bold;
+        color: aliceblue;
+        transition: margin-top 250ms;
+        @include mixins.mobile {
+            font-size: 26px;
+        }
+    }
+    &:hover::after {
+        margin-top: -8px;
+        @include mixins.mobile {
+            margin: -1px;
+        }
+        
+    }
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+    height: 10vh;
+    @include mixins.flex-center;
+}
+
+span {
+    font-weight: bold;
+    color: variables.$primary-color;
+}

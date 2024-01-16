@@ -1,0 +1,49 @@
+@use "variables";
+
+//mixin é um pedaço de código que pode ser chamado varias vezes (como uma função em js)
+@mixin container {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-img($img) {
+    background-image: url("../img/#{$img}");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    filter: grayscale(100%);
+    transition: 0.6s;
+
+    &:hover {
+        background-size: 110%;
+        filter: grayscale(0%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/#{$img}");
+    }
+}
+
+@mixin gallery-img($img) {
+    background-image: url("../img/#{$img}");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin title {
+    font-size: 2rem;
+    text-align: center;
+    color: variables.$primary-color;
+    margin-bottom: 5%;
+}
+
+@mixin mobile {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
