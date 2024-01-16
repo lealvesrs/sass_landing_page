@@ -1,5 +1,5 @@
 
-### 📎 [Deploy](https://lealvesrs.github.io/sass_landing_page/)
+### 📎 [Deploy](https://lealvesrs.github.io/scss_landing_page/)
 
 Este projeto é uma l<b>anding page</b> fictícia criada para um fotógrafo imaginário, oferecendo uma experiência visualmente cativante para os visitantes. A página foi desenvolvida como parte do treinamento para aprimorar as habilidades no uso de SCSS/Sass , proporcionando uma estrutura organizada e estilizada ao código.
 
