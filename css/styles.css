@@ -506,7 +506,7 @@ section .section-title {
   content: "↑";
   font-size: 32px;
   font-weight: bold;
-  color: aliceblue;
+  color: white;
   transition: margin-top 250ms;
 }
 @media (max-width: 425px) {
