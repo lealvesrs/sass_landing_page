@@ -212,6 +212,9 @@ section {
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
+            @include mixins.mobile {
+                display: none;
+            }
 
             &:hover {
                 background-color: variables.$primary-color;
@@ -221,6 +224,8 @@ section {
     }
     #card-1 {
         @include mixins.bg-img("corporate.jpg");
+        animation: fadeIn 5s;
+        
     }
     #card-2 {
         @include mixins.bg-img("studio.jpg");
@@ -231,6 +236,12 @@ section {
             background-size: 105%;
         }
     }
+
+    @keyframes fadeIn {
+        0% { grayscale: 0; }
+        100% { grayscale: 1; }
+      }
+      
 }
 
 #section-desc {
@@ -451,7 +462,7 @@ section {
         color: white;
         transition: margin-top 250ms;
         @include mixins.mobile {
-            font-size: 26px;
+            font-size: 20px;
         }
     }
     &:hover::after {
