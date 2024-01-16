@@ -224,7 +224,6 @@ section {
     }
     #card-1 {
         @include mixins.bg-img("corporate.jpg");
-        animation: fadeIn 5s;
         
     }
     #card-2 {
@@ -236,11 +235,6 @@ section {
             background-size: 105%;
         }
     }
-
-    @keyframes fadeIn {
-        0% { grayscale: 0; }
-        100% { grayscale: 1; }
-      }
       
 }
 
