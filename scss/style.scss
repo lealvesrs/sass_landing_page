@@ -103,7 +103,7 @@ section {
     background-position: center;
     filter: grayscale(80%);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/fotografo2.jpg");
-    background-size: 100%;
+    background-size: cover;
     @include mixins.flex-center;
     justify-content: start;
 
@@ -191,9 +191,9 @@ section {
     }
 
     &-card {
-        width: 31%;
-        height: 400px;
-        margin-bottom: 4%;
+        width: 33%;
+        height: 35vw;
+        margin-bottom: 40px;
         @include mixins.flex-center;
         flex-direction: column;
         color: variables.$primary-color;
@@ -210,11 +210,13 @@ section {
             margin-bottom: 1rem;
         }
         &-btn {
+            max-width: 60%;
             padding: 0.6rem 2rem; //vertical horizotal
             border: 2px solid variables.$primary-color;
             color: variables.$primary-color;
             font-weight: bold;
             text-transform: uppercase;
+            font-size: 1vw;
             letter-spacing: 1px;
             @include mixins.mobile {
                 display: none;
@@ -276,10 +278,6 @@ section {
             }
         }
 
-        &-img {
-            width: 50%;
-        }
-
         &-text {
             width: 50%;
             text-align: justify;
@@ -293,6 +291,7 @@ section {
         @include mixins.flex-center;
         width: 100%;
         min-height: 30vh;
+        max-height: 50vh;
 
         @include mixins.mobile {
             flex-wrap: wrap;
@@ -300,7 +299,7 @@ section {
 
         .gallery-card {
             width: 33%;
-            height: 30vh;
+            height: 20vw;
             filter: grayscale(70%);
             @include mixins.mobile {
                 height: 20vh;
@@ -474,7 +473,7 @@ section {
 
 footer {
     text-align: center;
-    padding-bottom: 2rem;
+    padding: 2rem;
     height: 10vh;
     @include mixins.flex-center;
 }

@@ -96,7 +96,7 @@ section .section-title {
   background-position: center;
   filter: grayscale(80%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/fotografo2.jpg");
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,9 +191,9 @@ section .section-title {
   }
 }
 .services-card {
-  width: 31%;
-  height: 400px;
-  margin-bottom: 4%;
+  width: 33%;
+  height: 35vw;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,11 +213,13 @@ section .section-title {
   margin-bottom: 1rem;
 }
 .services-card-btn {
+  max-width: 60%;
   padding: 0.6rem 2rem;
   border: 2px solid #FFF;
   color: #FFF;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 1vw;
   letter-spacing: 1px;
 }
 @media (max-width: 425px) {
@@ -231,40 +233,40 @@ section .section-title {
 }
 .services #card-1 {
   background-image: url("../img/corporate.jpg");
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 20% 20%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
 .services #card-1:hover {
-  background-size: 110%;
+  background-size: 110% 110%;
   filter: grayscale(0%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/corporate.jpg");
 }
 .services #card-2 {
   background-image: url("../img/studio.jpg");
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 20% 20%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
 .services #card-2:hover {
-  background-size: 110%;
+  background-size: 110% 110%;
   filter: grayscale(0%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/studio.jpg");
 }
 .services #card-3 {
   background-image: url("../img/fashion.png");
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 20% 20%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
 .services #card-3:hover {
-  background-size: 110%;
+  background-size: 110% 110%;
   filter: grayscale(0%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fashion.png");
 }
@@ -309,9 +311,6 @@ section .section-title {
     width: 80%;
   }
 }
-#section-desc .desc-img {
-  width: 50%;
-}
 #section-desc .desc-text {
   width: 50%;
   text-align: justify;
@@ -327,6 +326,7 @@ section .section-title {
   align-items: center;
   width: 100%;
   min-height: 30vh;
+  max-height: 50vh;
 }
 @media (max-width: 425px) {
   #section-desc #box-gallery {
@@ -335,7 +335,7 @@ section .section-title {
 }
 #section-desc #box-gallery .gallery-card {
   width: 33%;
-  height: 30vh;
+  height: 20vw;
   filter: grayscale(70%);
 }
 @media (max-width: 425px) {
@@ -346,50 +346,50 @@ section .section-title {
 }
 #section-desc #box-gallery #card-8 {
   background-image: url("../img/pessoas.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-9 {
   background-image: url("../img/refeicoes.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120%;
 }
 #section-desc #box-gallery #card-10 {
   background-image: url("../img/estudio.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-4 {
   background-image: url("../img/decoracao.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-5 {
   background-image: url("../img/esportes.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-6 {
   background-image: url("../img/cidade.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-7 {
   background-image: url("../img/paisagem.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #section-desc #box-gallery #card-11 {
   background-image: url("../img/moda.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -533,7 +533,7 @@ section .section-title {
 
 footer {
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 2rem;
   height: 10vh;
   display: flex;
   justify-content: center;

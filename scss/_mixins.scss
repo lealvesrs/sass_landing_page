@@ -15,14 +15,14 @@
 
 @mixin bg-img($img) {
     background-image: url("../img/#{$img}");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 20% 20%;
     filter: grayscale(100%);
     transition: 0.6s;
 
     &:hover {
-        background-size: 110%;
+        background-size: 110% 110%;
         filter: grayscale(0%);
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/#{$img}");
     }
@@ -31,7 +31,7 @@
 
 @mixin gallery-img($img) {
     background-image: url("../img/#{$img}");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
